@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b36ec991-1e29-4ed3-9fc1-53a565c536a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/dependabot.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/TextUtilitiesClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/config/ModMenuIntegration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/handlers/FormatButtonsHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/mixin/AnvilScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/mixin/ChatHudMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/mixin/SignEditScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/mixin/TextFieldWidgetMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/java/io/chaws/textutilities/client/utils/ChatUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/client/resources/textutilities.client.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/TextUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/config/TextUtilitiesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/handlers/ClickThroughHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/handlers/SignEditHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/mixin/FormattingMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/mixin/SharedConstantsMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/utils/FormattingUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/utils/ItemFrameEntityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/java/io/chaws/textutilities/utils/PlayerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/assets/textutilities/icon-curseforge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/assets/textutilities/icon.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/assets/textutilities/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/assets/textutilities/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/main/resources/textutilities.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.1/src/test/java/io/chaws/textutilities/utils/FormattingUtilsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/TextUtilitiesClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/config/ModMenuIntegration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/handlers/FormatButtonsHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/mixin/AnvilScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/mixin/ChatHudMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/mixin/SignEditScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/mixin/TextFieldWidgetMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/java/io/chaws/textutilities/client/utils/ChatUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/client/resources/textutilities.client.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/TextUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/config/TextUtilitiesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/handlers/ClickThroughHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/handlers/SignEditHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/mixin/FormattingMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/mixin/SharedConstantsMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/utils/FormattingUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/utils/ItemFrameEntityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/java/io/chaws/textutilities/utils/PlayerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/assets/textutilities/icon-curseforge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/assets/textutilities/icon.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/assets/textutilities/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/assets/textutilities/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/main/resources/textutilities.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.20.4/src/test/java/io/chaws/textutilities/utils/FormattingUtilsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/TextUtilitiesClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/config/ModMenuIntegration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/handlers/FormatButtonsHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/mixin/AnvilScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/mixin/ChatHudMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/mixin/SignEditScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/mixin/TextFieldWidgetMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/java/io/chaws/textutilities/client/utils/ChatUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/client/resources/textutilities.client.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/TextUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/config/TextUtilitiesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/handlers/ClickThroughHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/handlers/SignEditHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/mixin/FormattingMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/mixin/StringHelperMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/utils/FormattingUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/utils/ItemFrameEntityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/java/io/chaws/textutilities/utils/PlayerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/assets/textutilities/icon-curseforge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/assets/textutilities/icon.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/assets/textutilities/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/assets/textutilities/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/main/resources/textutilities.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.0/src/test/java/io/chaws/textutilities/utils/FormattingUtilsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/TextUtilitiesClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/config/ModMenuIntegration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/handlers/FormatButtonsHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/mixin/AnvilScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/mixin/ChatHudMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/mixin/SignEditScreenMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/mixin/TextFieldWidgetMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/java/io/chaws/textutilities/client/utils/ChatUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/client/resources/textutilities.client.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/TextUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/config/TextUtilitiesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/handlers/ClickThroughHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/handlers/SignEditHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/mixin/FormattingMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/mixin/StringHelperMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/utils/FormattingUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/utils/ItemFrameEntityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/java/io/chaws/textutilities/utils/PlayerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/assets/textutilities/icon-curseforge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/assets/textutilities/icon.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/assets/textutilities/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/assets/textutilities/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/main/resources/textutilities.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fabric-1.21.2/src/test/java/io/chaws/textutilities/utils/FormattingUtilsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TextUtilities" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TextUtilities" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TextUtilities" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TextUtilities" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="stonecutter" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "The-Death-Bringer"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MrMaurice211/mc-text-utilities.git",
+    "accountId": "1ca8f766-a166-4e39-8a5a-7d8a42a3a650"
+  }
+}]]></component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\MrMaurice211\.gradle\wrapper\dists\gradle-8.14.1-bin\baw1sv0jfoi8rxs14qo3h49cs\gradle-8.14.1" javaHome="C:\Users\MrMaurice211\.jdks\corretto-21.0.9" gradleVersion="8.14.1">
+    <option name="jvmArguments">
+      <list>
+        <option value="-Didea.compose.hot-reload=true" />
+        <option value="-Didea.compose.hot-reload.version=2" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="355eMHI0noKt3PHxgHR0cpyQ4EA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.C:/Users/MrMaurice211/Documents/git/TextUtilities [wrapper].executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.TextUtilities [\"Set active project to 1.20\"].executor": "Run",
+    "Gradle.TextUtilities [\"Set active project to 1.21\"].executor": "Run",
+    "Gradle.TextUtilities [\"Set active project to 1.21.2\"].executor": "Run",
+    "Gradle.TextUtilities [\"Set active project to 1.21.9\"].executor": "Run",
+    "Gradle.TextUtilities [build] (1).executor": "Run",
+    "Gradle.TextUtilities [build].executor": "Run",
+    "Gradle.TextUtilities [genSources].executor": "Run",
+    "Gradle.TextUtilities [jar].executor": "Run",
+    "Gradle.TextUtilities [migrateMappings].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MrMaurice211/Documents/git/TextUtilities/versions/1.20",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "dev.kikugie.stonecutter.projects": [
+      "C:/Users/MrMaurice211/Documents/git/TextUtilities#:"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\versions\1.20" />
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\versions\1.21.9" />
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\versions\1.21.2" />
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\src\main\java\io\chaws\textutilities\client\mixin" />
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MrMaurice211\Documents\git\TextUtilities\src\main\resources\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.chaws.textutilities.mixin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.TextUtilities [&quot;Set active project to 1.21.9&quot;]">
+    <configuration name="TextUtilities [&quot;Set active project to 1.20&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="&quot;Set active project to 1.20&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TextUtilities [&quot;Set active project to 1.21.2&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="&quot;Set active project to 1.21.2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TextUtilities [&quot;Set active project to 1.21.9&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="&quot;Set active project to 1.21.9&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TextUtilities [&quot;Set active project to 1.21&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="&quot;Set active project to 1.21&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TextUtilities [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Switch to 1.21" />
+      <item itemvalue="Gradle.Switch to 1.21.2" />
+      <item itemvalue="Gradle.Switch to 1.21.9" />
+      <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.20&quot;]" />
+      <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21&quot;]" />
+      <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21.2&quot;]" />
+      <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21.9&quot;]" />
+      <item itemvalue="Gradle.TextUtilities [build]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21.9&quot;]" />
+        <item itemvalue="Gradle.TextUtilities [build]" />
+        <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.20&quot;]" />
+        <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21.2&quot;]" />
+        <item itemvalue="Gradle.TextUtilities [&quot;Set active project to 1.21&quot;]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b36ec991-1e29-4ed3-9fc1-53a565c536a8" name="Changes" comment="" />
+      <created>1762404312044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762404312044</updated>
+      <workItem from="1762404313262" duration="13625000" />
+      <workItem from="1762485914084" duration="16484000" />
+      <workItem from="1762568492492" duration="2727000" />
+      <workItem from="1762797178117" duration="363000" />
+      <workItem from="1763094080457" duration="1190000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
