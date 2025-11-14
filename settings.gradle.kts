@@ -14,6 +14,6 @@ plugins {
 
 stonecutter {
     create(rootProject) {
-        versions("1.21", "1.21.2", "1.21.9")
+        versions("1.20", "1.20.5", "1.21", "1.21.2", "1.21.9")
     }
 }

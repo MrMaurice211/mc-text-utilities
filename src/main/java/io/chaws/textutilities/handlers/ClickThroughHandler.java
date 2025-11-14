@@ -110,10 +110,10 @@ public class ClickThroughHandler {
             final InteractionHand hand
     ) {
         //? if <1.21.2 {
-         /*var playerFacing = player.getDirection().getNormal();
+        /*var playerFacing = player.getDirection().getNormal();
         *///?} else {
         var playerFacing = player.getDirection().getUnitVec3i();
-        //?}
+         //?}
         var attachedBlockPos = clickedBlockPos.offset(playerFacing);
         var blockState = world.getBlockState(clickedBlockPos);
 
@@ -202,10 +202,10 @@ public class ClickThroughHandler {
                 false
         );
 
-        //? if >=1.21 {
-         attachedBlockState.useWithoutItem(world, player, attachedBlockHitResult);
+        //? if >=1.20.5 {
+        attachedBlockState.useWithoutItem(world, player, attachedBlockHitResult);
         //?} else {
-        /*attachedBlockState.use(world, player, hand, attachedBlockHitResult);
+         /*attachedBlockState.use(world, player, hand, attachedBlockHitResult);
         *///?}
     }
 }
