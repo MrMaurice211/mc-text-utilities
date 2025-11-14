@@ -1,0 +1,78 @@
+# Text Utilities (for Fabric)
+![GitHub License](https://img.shields.io/github/license/MrMaurice211/mc-text-utilities)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/MrMaurice211/mc-text-utilities)
+![GitHub Tag](https://img.shields.io/github/v/tag/MrMaurice211/mc-text-utilities)
+[![Discord chat](https://img.shields.io/badge/chat%20on-discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/kQjty3rfJd)
+
+Text Utilities is a free and open-source mod for Minecraft which adds color and formatting
+options to signs, books, and anvils.
+
+<div align="center">
+	<img src="src/main/resources/assets/textutilities/icon.png" width="128"  alt="Text Utilities Icon"/>
+</div>
+
+---
+
+## Features
+- Adds color and formatting buttons to the sign editor screen, anvil screen, and the book edit screen
+- Adds color and formatting support to fabric server's when installed on a server
+- Formatting code prefix is configurable to support servers that don't use the default `§` (for example, Purpur has built in support for `&`)
+- Adds the ability to click-through signs and item frames when they are attached to containers
+    - Sign click through is prevented when holding a sign, dye, an ink sac, or a glowing ink sac in your main hand
+    - Item Frame click through is prevented while sneaking or if the item frame has no item in it
+
+NOTE: At the moment, you have to press a color before a format button if you want to use both.
+
+![image](https://user-images.githubusercontent.com/5934505/201258398-e3b3ea7f-af3e-4e69-8bc4-4e0713880568.png)
+
+---
+
+## Installation
+[<img src="https://i.imgur.com/Ol1Tcf8.png" height="50"/>](https://modrinth.com/mod/fabric-api)
+[<img src="https://i.imgur.com/7weZ8uu.png" height="50"/>](https://modrinth.com/mod/cloth-config)
+
+## Manual installation
+
+You will need Fabric Loader 0.10.x or newer installed in your game in order to load Text
+Utilities. If you haven't installed Fabric mods before, you can find a variety of community
+guides for doing so [here](https://fabricmc.net/wiki/install).
+
+## Stable releases
+![GitHub release](https://img.shields.io/github/release/MrMaurice211/mc-text-utilities.svg)
+
+The latest releases of Text Utilities are published to our ~~[Modrinth](https://modrinth.com/mod/text-utilities),
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/text-utilities),
+and~~ [GitHub release](https://github.com/MrMaurice211/mc-text-utilities/releases) pages. Releases
+are considered to be **suitable for general use**, but they are not guaranteed to be free of bugs
+and other issues.
+
+Usually, releases will be made available on GitHub slightly sooner than other locations.
+
+#### Bleeding-edge builds (unstable)
+[![GitHub build status](https://img.shields.io/github/actions/workflow/status/ChristopherHaws/mc-text-utilities/build.yml?branch=main)](https://github.com/ChristopherHaws/mc-text-utilities/actions/workflows/build.yml)
+
+If you are a player who is looking to get your hands on the latest **bleeding-edge changes for
+testing**, consider taking a look at the automated builds produced through our
+[GitHub Actions workflow](https://github.com/ChristopherHaws/mc-text-utilities/actions/workflows/build.yml?query=event%3Apush).
+This workflow automatically runs every time a change is pushed to the repository, and as such,
+the builds it produces will generally reflect the latest snapshot of development.
+
+Bleeding edge builds will often include unfinished code that hasn't been extensively tested.
+That code may introduce incomplete features, bugs, crashes, and all other kinds of weird issues.
+You **should not use these bleeding edge builds** unless you know what you are doing and are
+comfortable with software debugging.
+
+## Reporting Issues
+You can report bugs and crashes by opening an issue on our [issue tracker](https://github.com/MrMaurice211/mc-text-utilities/issues).
+Before opening a new issue, use the search tool to make sure that your issue has not already
+been reported and ensure that you have completely filled out the issue template. Issues that are
+duplicates or do not contain the necessary information to triage and debug may be closed.
+
+Please note that while the issue tracker is open to feature requests, development is primarily
+focused on improving hardware compatibility, performance, and finishing any unimplemented
+features necessary for parity with the vanilla renderer.
+
+---
+## License
+Text Utilities is licensed under GNU LGPLv3, a free and open-source license. For more information,
+please see the [license file](https://github.com/MrMaurice211/mc-text-utilities/blob/main/LICENSE).
