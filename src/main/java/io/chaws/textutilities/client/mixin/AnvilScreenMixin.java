@@ -8,8 +8,8 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.gui.screens.inventory.ItemCombinerScreen;
 //? if >=1.21.9 {
-import net.minecraft.client.input.KeyEvent;
-//?}
+/*import net.minecraft.client.input.KeyEvent;
+*///?}
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
@@ -49,10 +49,10 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     protected void subInit(CallbackInfo ci) {
         // Defaults to: OrderedText.styledForwardsVisitedString(string, Style.EMPTY);
         //? if <1.21.9 {
-         /*this.name.setFormatter((abc, def) ->
-        *///?} else {
-        this.name.addFormatter((abc, def) ->
-        //?}
+         this.name.setFormatter((abc, def) ->
+        //?} else {
+        /*this.name.addFormatter((abc, def) ->
+        *///?}
                 Component.literal(abc).getVisualOrderText()
         );
     }
@@ -60,12 +60,12 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     @Inject(method = "keyPressed", at = @At("HEAD"))
     private void inject(
             //? if <1.21.9 {
-            /*int i,
+            int i,
             int j,
             int k,
-            *///?} else {
-            KeyEvent event,
-            //?}
+            //?} else {
+            /*KeyEvent event,
+            *///?}
             CallbackInfoReturnable<Boolean> ci
     ) {
         if (!TextUtilities.getConfig().anvilFormattingEnabled) {

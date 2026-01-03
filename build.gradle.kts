@@ -3,7 +3,6 @@ plugins {
     id("maven-publish")
 }
 
-
 group = project.property("maven_group") as String
 val minecraft = property("deps.minecraft") as String
 

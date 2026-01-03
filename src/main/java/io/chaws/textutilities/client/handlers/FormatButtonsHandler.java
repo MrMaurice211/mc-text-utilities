@@ -15,8 +15,8 @@ import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.client.gui.screens.inventory.HangingSignEditScreen;
 import net.minecraft.client.gui.screens.inventory.SignEditScreen;
 //? if >=1.21.9 {
-import net.minecraft.client.input.CharacterEvent;
-//?}
+/*import net.minecraft.client.input.CharacterEvent;
+*///?}
 import net.minecraft.network.chat.Component;
 
 import java.util.ArrayList;
@@ -172,23 +172,23 @@ public class FormatButtonsHandler {
                         Component.literal(label),
                         cod -> {
                             //? if <1.21.9 {
-                            /*screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
+                            screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
                             screen.charTyped(formatting.getChar(), 0);
-                            *///?} else {
-                            screen.charTyped(new CharacterEvent(ChatFormatting.PREFIX_CODE, 0));
+                            //?} else {
+                            /*screen.charTyped(new CharacterEvent(ChatFormatting.PREFIX_CODE, 0));
                             screen.charTyped(new CharacterEvent(formatting.getChar(), 0));
-                            //?}
+                            *///?}
 
                             if (formatting == ChatFormatting.RESET && screen instanceof AnvilScreen) {
 
                                 //? if <1.21.9 {
-                                /*screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
+                                screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
                                 screen.charTyped(ChatFormatting.WHITE.getChar(), 0);
-                                *///?} else {
-                                // Fixes https://github.com/ChristopherHaws/mc-text-utilities/issues/104
+                                //?} else {
+                                /*// Fixes https://github.com/ChristopherHaws/mc-text-utilities/issues/104
                                 screen.charTyped(new CharacterEvent(ChatFormatting.PREFIX_CODE, 0));
                                 screen.charTyped(new CharacterEvent(ChatFormatting.WHITE.getChar(), 0));
-                                //?}
+                                *///?}
 
                             }
 
