@@ -11,7 +11,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Environment(EnvType.CLIENT)
 @Mixin(EditBox.class)
 public class EditBoxMixin {
-	@Redirect(method = "renderWidget", at = @At(value = "INVOKE", target = "Ljava/lang/String;substring(I)Ljava/lang/String;", ordinal = 1))
+    //? if <26.1.2 {
+     @Redirect(method = "renderWidget", at = @At(value = "INVOKE", target = "Ljava/lang/String;substring(I)Ljava/lang/String;", ordinal = 1))
+    //? } else {
+    /*@Redirect(method = "extractWidgetRenderState", at = @At(value = "INVOKE", target = "Ljava/lang/String;substring(I)Ljava/lang/String;", ordinal = 1))
+    *///? }
 	private String appendFormatting(String string, int i) {
 		var strings = FormattingUtils.splitWithFormatting(string, i);
 

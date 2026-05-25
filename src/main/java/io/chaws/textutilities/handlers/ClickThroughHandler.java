@@ -19,7 +19,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
@@ -155,7 +154,7 @@ public class ClickThroughHandler {
         }
 
         var blockEntityType = blockEntity.getType();
-        var blockIdentifier = BlockEntityType.getKey(blockEntityType);
+        var blockIdentifier = BuiltInRegistries.BLOCK_ENTITY_TYPE.getKey(blockEntityType);
         if (blockIdentifier == null) {
             return false;
         }
@@ -180,9 +179,6 @@ public class ClickThroughHandler {
 
         var entityType = entity.getType();
         var entityIdentifier = EntityType.getKey(entityType);
-        if (entityIdentifier == null) {
-            return false;
-        }
 
         return config.additionalClickThroughIdentifiers.contains(entityIdentifier.toString());
     }

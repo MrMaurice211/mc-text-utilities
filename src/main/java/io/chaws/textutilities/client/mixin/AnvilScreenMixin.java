@@ -7,11 +7,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.gui.screens.inventory.ItemCombinerScreen;
-//? if >=1.21.9 {
-/*import net.minecraft.client.input.KeyEvent;
-*///?}
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;
@@ -24,10 +20,22 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+//? if >=26.1.2 {
+/*import net.minecraft.resources.Identifier;
+import org.spongepowered.asm.mixin.Final;
+*///? } else {
+import net.minecraft.resources.ResourceLocation;
+//? }
+
+//? if >= 1.21.9 {
+/*import net.minecraft.client.input.KeyEvent;
+*///? }
+
 @Environment(EnvType.CLIENT)
 @Mixin(AnvilScreen.class)
 public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
 
+    //? if < 26.1 {
     public AnvilScreenMixin(
             AnvilMenu handler,
             Inventory playerInventory,
@@ -36,6 +44,20 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     ) {
         super(handler, playerInventory, title, texture);
     }
+    //?} else {
+
+    /*@Shadow
+    @Final
+    private static Identifier ANVIL_LOCATION;
+
+    public AnvilScreenMixin(
+            AnvilMenu handler,
+            Inventory playerInventory,
+            Component title
+    ) {
+        super(handler, playerInventory, title, ANVIL_LOCATION);
+    }
+    *///? }
 
     @Shadow
     private EditBox name;
@@ -49,10 +71,10 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     protected void subInit(CallbackInfo ci) {
         // Defaults to: OrderedText.styledForwardsVisitedString(string, Style.EMPTY);
         //? if <1.21.9 {
-         this.name.setFormatter((abc, def) ->
-        //?} else {
+        this.name.setFormatter((abc, def) ->
+         //?} else {
         /*this.name.addFormatter((abc, def) ->
-        *///?}
+                *///?}
                 Component.literal(abc).getVisualOrderText()
         );
     }
@@ -163,7 +185,7 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     //		return new RenameItemC2SPacket(name);
     //	}
 
-    @ModifyVariable(method = "onNameChanged", at = @At("HEAD"), argsOnly = true)
+    @ModifyVariable(method = "onNameChanged", at = @At("HEAD"), argsOnly = true, name = "name")
     private String onNameChanged(String name) {
         if (!TextUtilities.getConfig().anvilFormattingEnabled) {
             return name;

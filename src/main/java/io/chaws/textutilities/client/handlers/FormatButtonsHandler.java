@@ -14,13 +14,14 @@ import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.client.gui.screens.inventory.HangingSignEditScreen;
 import net.minecraft.client.gui.screens.inventory.SignEditScreen;
-//? if >=1.21.9 {
-/*import net.minecraft.client.input.CharacterEvent;
-*///?}
 import net.minecraft.network.chat.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
+//? if >=1.21.9 {
+/*import net.minecraft.client.input.CharacterEvent;
+*///? }
 
 @Environment(EnvType.CLIENT)
 public class FormatButtonsHandler {
@@ -109,7 +110,11 @@ public class FormatButtonsHandler {
                 6
         );
 
+        //? if <26.1.2 {
         var screenButtons = Screens.getButtons(screen);
+        //? } else {
+        /*var screenButtons = Screens.getWidgets(screen);
+         *///? }
         screenButtons.addAll(colorButtons);
         screenButtons.addAll(modifierButtons);
     }
@@ -171,25 +176,11 @@ public class FormatButtonsHandler {
                 .builder(
                         Component.literal(label),
                         cod -> {
-                            //? if <1.21.9 {
-                            screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
-                            screen.charTyped(formatting.getChar(), 0);
-                            //?} else {
-                            /*screen.charTyped(new CharacterEvent(ChatFormatting.PREFIX_CODE, 0));
-                            screen.charTyped(new CharacterEvent(formatting.getChar(), 0));
-                            *///?}
+                            typeChar(screen, formatting);
 
+                            // Fixes https://github.com/ChristopherHaws/mc-text-utilities/issues/104
                             if (formatting == ChatFormatting.RESET && screen instanceof AnvilScreen) {
-
-                                //? if <1.21.9 {
-                                screen.charTyped(ChatFormatting.PREFIX_CODE, 0);
-                                screen.charTyped(ChatFormatting.WHITE.getChar(), 0);
-                                //?} else {
-                                /*// Fixes https://github.com/ChristopherHaws/mc-text-utilities/issues/104
-                                screen.charTyped(new CharacterEvent(ChatFormatting.PREFIX_CODE, 0));
-                                screen.charTyped(new CharacterEvent(ChatFormatting.WHITE.getChar(), 0));
-                                *///?}
-
+                                typeChar(screen, ChatFormatting.WHITE);
                             }
 
                         }
@@ -200,10 +191,27 @@ public class FormatButtonsHandler {
                 .build();
     }
 
+    private static void typeChar(Screen screen, ChatFormatting formatting) {
+        char prefixChar = ChatFormatting.PREFIX_CODE;
+        char formattingChar = formatting.getChar();
+        //? if >=26.1.2 {
+        /*screen.charTyped(new CharacterEvent(prefixChar));
+        screen.charTyped(new CharacterEvent(formattingChar));
+        *///? } elif <1.21.9 {
+         screen.charTyped(prefixChar, 0);
+         screen.charTyped(formattingChar, 0);
+        //? } else {
+        /*screen.charTyped(new CharacterEvent(prefixChar, 0));
+        screen.charTyped(new CharacterEvent(formattingChar, 0));
+        *///? }
+
+    }
+
     private static String beatifyEnumName(String name) {
         String[] split = name.split("_");
         String concat = String.join(" ", split);
         // Uppercase just the first letter of all the string
         return concat.substring(0, 1).toUpperCase() + concat.substring(1);
     }
+
 }
