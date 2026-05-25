@@ -185,7 +185,7 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     //		return new RenameItemC2SPacket(name);
     //	}
 
-    @ModifyVariable(method = "onNameChanged", at = @At("HEAD"), argsOnly = true, name = "name")
+    @ModifyVariable(method = "onNameChanged", at = @At("HEAD"), argsOnly = true)
     private String onNameChanged(String name) {
         if (!TextUtilities.getConfig().anvilFormattingEnabled) {
             return name;
