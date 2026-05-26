@@ -4,17 +4,45 @@ on:
     tags:
       - "v*"
 
-# Required for creating/updating GitHub Releases
 permissions:
   contents: write
 
 jobs:
+  generate-matrix:
+    name: Generate Version Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      versions: ${{ steps.set-matrix.outputs.versions }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: set-matrix
+        run: |
+          python3 - << 'EOF'
+          import json, os
+          base_dir = 'versions'
+          versions = []
+          if os.path.isdir(base_dir):
+              versions = sorted([
+                  d for d in os.listdir(base_dir) 
+                  if os.path.isdir(os.path.join(base_dir, d)) and not d.startswith('.')
+              ])
+          
+          if not versions:
+              print("::warning::No version directories found in versions/. Matrix will be empty.")
+          
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'versions={json.dumps(versions)}\n')
+          EOF
+
   build:
     name: Build ${{ matrix.minecraft_version }}
+    needs: generate-matrix
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        minecraft_version: ["1.20", "1.20.5", "1.21", "1.21.2", "1.21.9", "26.1.2"]
+        minecraft_version: ${{ fromJSON(needs.generate-matrix.outputs.versions) }}
+      fail-fast: false
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,10 +54,8 @@ jobs:
           distribution: temurin
           cache: gradle
 
-      - name: Make Gradle wrapper executable
-        run: chmod +x ./gradlew
+      - run: chmod +x ./gradlew
 
-      # Build only the specific subproject for this matrix entry
       - name: Build module
         run: ./gradlew :${{ matrix.minecraft_version }}:build --no-daemon
 
@@ -43,7 +69,7 @@ jobs:
 
   release:
     name: Publish to GitHub Releases
-    needs: build
+    needs: [generate-matrix, build]
     runs-on: ubuntu-latest
     steps:
       - name: Download all build artifacts
