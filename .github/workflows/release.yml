@@ -1,94 +1,73 @@
-name: release
+name: Release
 on:
   push:
     tags:
       - "v*"
 
-env:
-  APPEND_BUILD_NUMBER: false
+# Required for creating/updating GitHub Releases
+permissions:
+  contents: write
 
 jobs:
-  build-all:
-    name: release
+  build:
+    name: Build ${{ matrix.minecraft_version }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        minecraft_version: ["1.20", "1.20.5", "1.21", "1.21.2", "1.21.9", "26.1.2"]
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: setup jdk 25
-        uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         with:
           java-version: 25
           distribution: temurin
           cache: gradle
 
-      - name: make gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
+      - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: build all
-        run: ./gradlew build --no-daemon
+      # Build only the specific subproject for this matrix entry
+      - name: Build module
+        run: ./gradlew :${{ matrix.minecraft_version }}:build --no-daemon
 
-      - name: capture build artifacts
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: all-built-jars
-          path: versions/**/build/libs/*.jar
+          name: build-${{ matrix.minecraft_version }}
+          path: versions/${{ matrix.minecraft_version }}/build/libs/*.jar
           retention-days: 1
+          if-no-files-found: error
 
-  publish:
-    name: Publish for ${{ matrix.minecraft_version }}
-    needs: build-all
+  release:
+    name: Publish to GitHub Releases
+    needs: build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        minecraft_version: [ "1.20", "1.20.5", "1.21", "1.21.2", "1.21.9", "26.1.2" ]
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: read version from tag
-        id: version_read
-        run: echo "tag_version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
-        shell: bash
-
-      - uses: madhead/semver-utils@latest
-        id: version
-        with:
-          lenient: false
-          version: ${{ github.ref_name }}
-
-      - name: Download all built JARs
+      - name: Download all build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: all-built-jars
-          path: versions/
+          pattern: build-*
+          path: release-artifacts/
+          merge-multiple: true
 
-      - name: debug List contents of versions
+      - name: Filter out dev/sources/javadoc JARs
         run: |
-          ls -R versions/
-          echo "=== Checking for JARs in specific version ==="
-          ls -la "versions/${{ matrix.minecraft_version }}/build/libs/" 2>/dev/null || echo "Directory not found or empty"
+          mkdir -p final-release
+          find release-artifacts -type f -name "*.jar" \
+            ! -name "*-dev.jar" \
+            ! -name "*-sources.jar" \
+            ! -name "*-javadoc.jar" \
+            -exec cp {} final-release/ \;
 
-      - uses: Kir-Antipov/mc-publish@v3.3
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: v${{ steps.version.outputs.release }}
-          version: ${{ steps.version.outputs.release }}+${{ matrix.minecraft_version }}
-          version-type: release
-
-          github-generate-changelog: true
-          github-draft: false
-          github-prerelease: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-          files: |
-            versions/${{ matrix.minecraft_version }}/build/libs/!(*-@(dev|sources|javadoc)).jar
-            versions/${{ matrix.minecraft_version }}/build/libs/*-@(dev|sources|javadoc).jar
-
-          retry-attempts: 2
-          retry-delay: 10000
-          fail-mode: fail
+          files: final-release/*.jar
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
