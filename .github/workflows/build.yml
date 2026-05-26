@@ -1,0 +1,76 @@
+name: build
+on:
+  workflow_dispatch:
+  pull_request:
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.pdn"
+      - ".github/FUNDING.yml"
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.pdn"
+      - ".github/FUNDING.yml"
+
+env:
+  APPEND_BUILD_NUMBER: true
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: setup jdk 25
+        uses: actions/setup-java@v3
+        with:
+          java-version: 25
+          distribution: temurin
+          cache: gradle
+
+      - name: make gradle wrapper executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      - name: build all modules
+        run: ./gradlew build --no-daemon
+
+      - name: upload artifact for >=1.20 <1.20.5
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-1.20
+          path: versions/1.20/build/libs/
+
+      - name: upload artifact for >=1.20.5 <1.21
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-1.20.5
+          path: versions/1.20.5/build/libs/
+
+      - name: upload artifact for >=1.21 <1.21.2
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-1.21
+          path: versions/1.21/build/libs/
+
+      - name: upload artifact for >=1.21.2 <1.21.9
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-1.21.2
+          path: versions/1.21.2/build/libs/
+
+      - name: upload artifact for >=1.21.9 <26.1.2
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-1.21.9
+          path: versions/1.21.9/build/libs/
+
+      - name: upload artifact for >=26.1.2
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-26.1.2
+          path: versions/26.1.2/build/libs/

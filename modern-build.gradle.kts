@@ -15,7 +15,6 @@ base {
 val requiredJava = JavaVersion.VERSION_25
 
 java {
-    withSourcesJar()
     targetCompatibility = requiredJava
     sourceCompatibility = requiredJava
 }
@@ -27,9 +26,7 @@ repositories {
 
 dependencies {
     minecraft("com.mojang:minecraft:${minecraft}")
-
     implementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
-
     implementation("net.fabricmc.fabric-api:fabric-api:${project.property("modern_fabric_version")}")
 
     api("com.terraformersmc:modmenu:18.0.0-beta.1")

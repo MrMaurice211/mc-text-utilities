@@ -18,7 +18,6 @@ val requiredJava = when {
     else -> JavaVersion.VERSION_17
 }
 java {
-    withSourcesJar()
     targetCompatibility = requiredJava
     sourceCompatibility = requiredJava
 }
@@ -30,11 +29,8 @@ repositories {
 
 dependencies {
     minecraft("com.mojang:minecraft:${minecraft}")
-
     mappings(loom.officialMojangMappings())
-
     modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
-
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
 
     modApi("com.terraformersmc:modmenu:16.0.0-rc.1")
@@ -55,7 +51,7 @@ tasks.processResources {
         expand(
             "version" to project.version,
             "version_range" to versionRange,
-            "loader_version" to (project.property("loader_version") ?: "0.17.3")
+            "loader_version" to (project.property("loader_version") ?: "0.19.2")
         )
     }
 
